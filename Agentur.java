@@ -38,7 +38,7 @@ public class Agentur{
         return gefunden;
     }    
     
-    public void sortiereNachScore(){
+    public void sortiereNachScoreUnterricht(){
         Statist maxStat; 
         Queue hilfQ = new Queue<Statist>(); 
         Queue ergQ = new Queue<Statist>();
@@ -73,4 +73,16 @@ public class Agentur{
             array[x+1] = key;  
         }
     }  
+
+    public void sortierenNachScoreEineQueue() {
+        Queue<Statist> hilfe = new Queue<Statist>();
+        int tmpLength = this.statisten.getLength();
+        for (int i = 0; i < tmpLength; i++) {
+            int maxIndex = IndexOfBiggestScore();
+            this.statisten.cycle(maxIndex);
+            hilfe.enqueue(this.statisten.getFront());
+            this.statisten.dequeue();
+        }
+        this.statisten = hilfe;
+    }
 }
