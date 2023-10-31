@@ -16,7 +16,7 @@ public class Umgekehrt{
             zahlenfolge.dequeue();
         } 
         while(!ausgabe.isEmpty()){
-            System.out.println(ausgabe.top() + " ");
+            System.out.println(ausgabe);
             ausgabe.pop();
         }
     }

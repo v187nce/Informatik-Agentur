@@ -73,16 +73,18 @@ public class Agentur{
             array[x+1] = key;  
         }
     }  
-
-    public void sortierenNachScoreEineQueue() {
-        Queue<Statist> hilfe = new Queue<Statist>();
-        int tmpLength = this.statisten.getLength();
-        for (int i = 0; i < tmpLength; i++) {
-            int maxIndex = IndexOfBiggestScore();
-            this.statisten.cycle(maxIndex);
-            hilfe.enqueue(this.statisten.getFront());
-            this.statisten.dequeue();
-        }
-        this.statisten = hilfe;
+    public static void main (String[] args){
+        System.out.println("Vor Insertionsort: ");
+        int[] array = {9, 4, 6, 10, 3}; 
+        for(int i:array){    
+            System.out.print(i+" ");    
+        } 
+        System.out.println();
+        System.out.println("Nach Insertionsort: ");
+        insertionSort(array);
+        for(int i:array){    
+            System.out.print(i+" ");    
+        } 
     }
+
 }
