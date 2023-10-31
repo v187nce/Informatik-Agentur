@@ -60,8 +60,17 @@ public class Agentur{
             hilfQ = new Queue<Statist>();
         }
         statisten = ergQ; 
-    }
-    
-    
-    
+    } 
+    public static void insertionSort(int array[]) {  
+        int arrayLength = array.length;  
+        for (int i = 1; i < arrayLength; i++) {  
+            int key = array[i];  
+            int x = i-1;  
+            while (x > -1 && array [x] > key) {  
+                array [x+1] = array [x];  
+                x--;  
+            }  
+            array[x+1] = key;  
+        }
+    }  
 }
