@@ -2,6 +2,8 @@ import java.util.Stack;
 
 public class Umgekehrt{
 
+    // Dalton LW 10 S. 65-67 S.67 Aufgabe 1
+
     private Queue<Integer> zahlenfolge = new Queue<Integer>(); 
     private Stack<Integer> ausgabe = new Stack<Integer>(); 
 
